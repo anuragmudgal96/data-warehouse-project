@@ -11,6 +11,9 @@ Script Purpose:
 
 	Parameters:
 	None : This stored procedure does not accept any parameters or return any values.
+
+You can execeute this stored procedure using
+EXEC bronze.load_bronze
 */
 
 
@@ -138,5 +141,3 @@ BEGIN
 		PRINT '===========================================';
 	END CATCH
 END;
-
-EXEC bronze.load_bronze
