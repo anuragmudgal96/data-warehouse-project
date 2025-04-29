@@ -17,9 +17,9 @@ Script Purpose:
 
 
 
-==========================================
+--==========================================
 -- Create Dimension: gold.dim_customers
-==========================================
+--==========================================
 IF OBJECT_ID('gold.dim_customers','V') IS NOT NULL
 	DROP VIEW gold.dim_customers;
 GO
@@ -43,9 +43,9 @@ ON ci.cst_key=ca.cid
 LEFT JOIN silver.erp_loc_a101 la
 ON ci.cst_key=la.cid
 GO
-==========================================
+--==========================================
 -- Create Dimension: gold.dim_products
-==========================================
+--==========================================
 IF OBJECT_ID('gold.dim_products','V') IS NOT NULL
 	DROP VIEW gold.dim_products;
 GO
@@ -67,9 +67,9 @@ LEFT JOIN silver.erp_px_cat_g1v2 pcat
 ON pinfo.cat_id=pcat.id
 WHERE prd_end_dt IS NULL -- Filter out all historical data
 GO
-==========================================
+--==========================================
 -- Create Fact: gold.fact_sales
-==========================================
+--==========================================
 IF OBJECT_ID('gold.fact_sales','V') IS NOT NULL
 	DROP VIEW gold.fact_sales;
 GO
